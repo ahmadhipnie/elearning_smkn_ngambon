@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Elearning_smkn_ngambon" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/button</item>
+        <item name="buttonIconTint">@color/tema</item>
+        <item name="navigationIconTint">@color/button</item>
+
+    </style>
+
+
+
+    <style name="Theme.Elearning_smkn_ngambon" parent="Base.Theme.Elearning_smkn_ngambon" />
+
+    <style name="toastMaps">
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/poppins_medium</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">#00C14D</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeColor">#fff</item>
+        <item name="stIconStart">@drawable/ic_person</item>
+        <item name="stLength">LONG</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/container</item>
+    </style>
+</resources>

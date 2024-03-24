@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.DetailTugasActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/btnKembali"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_marginRight="30dp"/>
+            <TextView
+                android:id="@+id/tv_judul_tugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Judul Tugas"
+                android:textColor="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="artikel">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_keterangan_tugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="keterangan tugas"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/garisputus"
+                android:padding="9dp"
+                >
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="Silahkan pilih file"
+                    android:textAlignment="center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/button"/>
+
+                <ImageView
+                    android:id="@+id/imView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="30dp">
+
+
+                <Button
+                    android:id="@+id/btn_pilih_file"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:text="Pilih File"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/text"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_drive_file_move"
+                    app:backgroundTint="@color/button"
+                    app:strokeColor="@color/text"
+                    app:strokeWidth="2dp"
+                    app:iconTint="@color/text" />
+
+                <Button
+                    android:id="@+id/btn_upload_tugas"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_gravity="end"
+                    android:text="Upload tugas"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/button"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_upload_file"
+                    app:backgroundTint="@color/text"
+                    app:strokeColor="@color/button"
+                    app:strokeWidth="2dp"
+                    app:iconTint="@color/button" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
