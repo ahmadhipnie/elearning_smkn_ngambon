@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
             getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, profileFragment).commit();
             bottomNavigationView.setSelectedItemId(R.id.menu_profile);
         } else if (tabToOpen != null && tabToOpen.equals("chat")) {
-            // Open the Jadwal Panen tab
+            // Open the chat tab
             getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, chatFragment).commit();
             bottomNavigationView.setSelectedItemId(R.id.menu_chat);
         } else if (tabToOpen != null && tabToOpen.equals("dashboard")) {
-            // Open the PerkembanganModel tab
+            // Open the dashboard tab
             getSupportFragmentManager().beginTransaction().replace(R.id.flFragment, dashboardFragment).commit();
             bottomNavigationView.setSelectedItemId(R.id.menu_dashboard);
         } else{
@@ -73,5 +73,14 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
         }
             return false;
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Menutup aplikasi saat tombol kembali ditekan
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+        super.onBackPressed();
     }
 }

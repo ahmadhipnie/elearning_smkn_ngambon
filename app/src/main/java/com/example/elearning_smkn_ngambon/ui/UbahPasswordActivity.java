@@ -58,12 +58,6 @@ public class UbahPasswordActivity extends AppCompatActivity {
         });
 
 
-        
-
-
-
-
-
         tvUbahPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,7 +71,7 @@ public class UbahPasswordActivity extends AppCompatActivity {
     }
 
     private void ubahPassword() {
-        int userId = sharedPreferences.getInt("id", 0);
+        int userId = sharedPreferences.getInt("nisn", 0);
         String password = sharedPreferences.getString("password", "");
         String passwordLama = etPasswordLama.getText().toString().trim();
         String passwordBaru = etPasswordBaru.getText().toString().trim();
@@ -140,7 +134,7 @@ public class UbahPasswordActivity extends AppCompatActivity {
                     protected Map<String, String> getParams() {
                         // Parameter yang akan dikirim ke API (ID user, password lama, password baru)
                         Map<String, String> params = new HashMap<>();
-                        params.put("id", String.valueOf(userId));
+                        params.put("nisn", String.valueOf(userId));
                         params.put("old_password", passwordLama);
                         params.put("new_password", passwordBaru);
                         return params;

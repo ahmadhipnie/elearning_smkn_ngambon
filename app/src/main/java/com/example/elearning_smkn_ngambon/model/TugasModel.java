@@ -1,10 +1,10 @@
 package com.example.elearning_smkn_ngambon.model;
 
 public class TugasModel {
-    private int idTugas;
-    private String namaMateri;
-    private String tenggatWaktu;
-    private String keterangan;
+    private final int idTugas;
+    private final String namaMateri;
+    private final String tenggatWaktu;
+    private final String keterangan;
 
     public TugasModel(int idTugas, String namaMateri, String tenggatWaktu, String keterangan) {
         this.idTugas = idTugas;

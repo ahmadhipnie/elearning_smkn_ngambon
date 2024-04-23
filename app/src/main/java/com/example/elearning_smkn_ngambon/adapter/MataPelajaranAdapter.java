@@ -18,8 +18,8 @@ import com.example.elearning_smkn_ngambon.ui.MateriActivity;
 import java.util.List;
 
 public class MataPelajaranAdapter extends RecyclerView.Adapter<MataPelajaranAdapter.MataPelajaranViewHolder> {
-    private Context context;
-    private List<MataPelajaranModel> mataPelajaranList;
+    private final Context context;
+    private final List<MataPelajaranModel> mataPelajaranList;
 
     public MataPelajaranAdapter(Context context, List<MataPelajaranModel> mataPelajaranList) {
         this.context = context;

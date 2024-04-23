@@ -55,7 +55,7 @@ public class ProfileFragment extends Fragment {
         String tanggalLahir = sharedPreferences.getString("tanggal_lahir", "");
         String nomorHp = sharedPreferences.getString("nomor_hp", "");
         String alamat = sharedPreferences.getString("alamat", "");
-        String kelas = sharedPreferences.getString("kelas", " - ");
+        String kelas = sharedPreferences.getString("nama_kelas", " - ");
 
         String nisnString = String.valueOf(nisn);
 

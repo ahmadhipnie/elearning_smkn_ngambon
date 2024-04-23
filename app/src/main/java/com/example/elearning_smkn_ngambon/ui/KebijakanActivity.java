@@ -23,13 +23,6 @@ public class KebijakanActivity extends AppCompatActivity {
         btnKembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                kembaliKeAkun();
-            }
-
-            private void kembaliKeAkun(){
-                Intent intent = new Intent(KebijakanActivity.this, MainActivity.class);
-                intent.putExtra("tab", "profile"); // Menambahkan ekstra "tab" untuk membuka tab Akun
-                startActivity(intent);
                 finish();
             }
         });

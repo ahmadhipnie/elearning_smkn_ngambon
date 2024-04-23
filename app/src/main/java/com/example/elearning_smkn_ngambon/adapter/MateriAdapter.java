@@ -17,8 +17,8 @@ import java.util.List;
 
 public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.MateriViewHolder>{
 
-    private Context context;
-    private List<MateriModel> materiList;
+    private final Context context;
+    private final List<MateriModel> materiList;
 
     public MateriAdapter(Context context, List<MateriModel> materiModelList) {
         this.context = context;

@@ -1,8 +1,8 @@
 package com.example.elearning_smkn_ngambon.model;
 
 public class ChatModel {
-    private String message;
-    private boolean isBotMessage;
+    private final String message;
+    private final boolean isBotMessage;
 
     public ChatModel(String message, boolean isBotMessage) {
         this.message = message;

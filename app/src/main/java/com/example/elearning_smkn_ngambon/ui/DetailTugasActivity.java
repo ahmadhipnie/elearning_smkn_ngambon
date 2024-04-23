@@ -1,11 +1,10 @@
 package com.example.elearning_smkn_ngambon.ui;
 
-import static android.content.ContentValues.TAG;
+
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +13,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.OpenableColumns;
-import android.util.Log;
+
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -99,7 +98,7 @@ public class DetailTugasActivity extends AppCompatActivity {
                 String encodedFile = new String(fileBytes);
 
                 RequestQueue requestQueue = Volley.newRequestQueue(this);
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, apiconfig.UPLOAD_TUGAS, new Response.Listener<String>() {
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, apiconfig.UPLOAD_FILE, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
@@ -221,6 +220,3 @@ public class DetailTugasActivity extends AppCompatActivity {
         return name;
     }
 }
-
-
-

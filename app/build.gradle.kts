@@ -56,12 +56,24 @@ dependencies {
     implementation ("com.google.code.gson:gson:2.10.1")
 
     // add the dependency for the Google AI client SDK for Android
-    implementation("com.google.ai.client.generativeai:generativeai:0.2.2")
+    implementation("com.google.ai.client.generativeai:generativeai:0.3.0")
 
     // Required for one-shot operations (to use `ListenableFuture` from Reactive Streams)
-    implementation("com.google.guava:guava:31.0.1-android")
+    implementation("com.google.guava:guava:31.0.1-jre")
 
     // Required for streaming operations (to use `Publisher` from Guava Android)
     implementation("org.reactivestreams:reactive-streams:1.0.4")
 
+
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.karumi:dexter:6.0.2")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
+
+
+    // Dependensi Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+    // Dependensi Gson Converter
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 }

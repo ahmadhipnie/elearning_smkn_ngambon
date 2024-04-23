@@ -15,6 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -26,6 +27,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.elearning_smkn_ngambon.R;
 import com.example.elearning_smkn_ngambon.api.apiconfig;
+import com.example.elearning_smkn_ngambon.ui.guru.LoginActivityGuru;
+import com.example.elearning_smkn_ngambon.ui.guru.MainActivityGuru;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONException;
@@ -37,12 +40,13 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin;
+    TextView tvloginGuru;
 
     EditText etNisn, etPassword;
 
     private boolean passwordVisible;
     private SharedPreferences sharedPreferences;
-    private String url = apiconfig.LOGIN_ENDPOINT;
+    private final String url = apiconfig.LOGIN_ENDPOINT;
 
     public String str_nisn;
     public String str_password;
@@ -59,6 +63,15 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_login);
         etNisn = findViewById(R.id.et_nisn);
         etPassword = findViewById(R.id.et_password);
+        tvloginGuru = findViewById(R.id.tv_login_guru);
+
+        tvloginGuru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentKeLoginGuru = new Intent(LoginActivity.this, LoginActivityGuru.class);
+                startActivity(intentKeLoginGuru);
+            }
+        });
 
         etPassword.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -87,9 +100,12 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
         checkLoginStatus();
+        checkLoginStatusGuru();
 
 
     }
+
+
 
     public void Login(View view) {
 
@@ -126,6 +142,7 @@ public class LoginActivity extends AppCompatActivity {
                             String password = userObject.getString("password");
                             String nomorHp = userObject.getString("nomor_hp");
                             int idKelas = userObject.getInt("id_kelas");
+                            String namaKelas = userObject.getString("nama_kelas");
 
                             sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
                             // Simpan data ke SharedPreferences
@@ -138,6 +155,7 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putString("alamat", password);
                             editor.putString("nomor_hp", nomorHp);
                             editor.putInt("id_kelas", idKelas);
+                            editor.putString("nama_kelas", namaKelas);
                             editor.putBoolean("isLoggedIn", true);
                             editor.apply();
 
@@ -183,6 +201,16 @@ public class LoginActivity extends AppCompatActivity {
         if (isLoggedIn) {
             // Pengguna sudah login sebelumnya, arahkan ke halaman beranda
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+    private void checkLoginStatusGuru() {
+        boolean isLoggedInGuru = sharedPreferences.getBoolean("isLoggedInGuru", false);
+        if (isLoggedInGuru) {
+            // Pengguna sudah login sebelumnya, arahkan ke halaman beranda
+            Intent intent = new Intent(LoginActivity.this, MainActivityGuru.class);
             startActivity(intent);
             finish();
         }

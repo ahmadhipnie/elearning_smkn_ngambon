@@ -20,6 +20,7 @@ public class FaqActivity extends AppCompatActivity {
 
     EditText etPertanyaanFaq;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +33,6 @@ public class FaqActivity extends AppCompatActivity {
         tvFaq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ketika tv_ubah_password ditekan, jalankan Intent
-                Intent intent = new Intent(FaqActivity.this, MainActivity.class);
-                intent.putExtra("tab", "profile");
-                startActivity(intent);
                 finish();
             }
         });

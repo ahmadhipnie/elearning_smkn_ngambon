@@ -1,9 +1,9 @@
 package com.example.elearning_smkn_ngambon.model;
 
 public class MateriModel {
-    private int idMateri;
-    private String judulMateri;
-    private String keteranganMateri;
+    private final int idMateri;
+    private final String judulMateri;
+    private final String keteranganMateri;
 
     public MateriModel(int idMateri, String judulMateri, String keteranganMateri) {
         this.idMateri = idMateri;

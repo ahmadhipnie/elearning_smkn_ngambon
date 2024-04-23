@@ -33,7 +33,7 @@
             android:layout_height="60dp"
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/bg_et_login"
-            android:hint="masukkan nisn"
+            android:hint="masukkan NISN tanpa 00"
             android:inputType="number"
             />
         <EditText
@@ -48,6 +48,19 @@
             android:hint="masukkan Kata Sandi"
             android:inputType="textPassword"
             />
+
+
+        <TextView
+            android:id="@+id/tv_login_guru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login dengan guru"
+            android:gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:textColor="@color/button"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"/>
 
 
         <Button

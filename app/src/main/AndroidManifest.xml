@@ -17,41 +17,50 @@
         android:theme="@style/Theme.Elearning_smkn_ngambon"
         tools:targetApi="31">
         <activity
+            android:name=".ui.guru.UbahPasswordActivityGuru"
+            android:exported="false" />
+        <activity
+            android:name=".ui.guru.LoginActivityGuru"
+            android:exported="false" />
+        <activity
+            android:name=".ui.guru.MainActivityGuru"
+            android:exported="false" />
+        <activity
             android:name=".ui.DetailMateriActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.MateriActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.DetailTugasActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SemuaTugasActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SemuaMataPelajaranActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.FaqActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.KebijakanActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.UbahPasswordActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.LoginActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.SplashActivity"
             android:exported="true"

@@ -19,8 +19,8 @@ import java.util.Date;
 import java.util.List;
 
 public class TugasAdapter extends RecyclerView.Adapter<TugasAdapter.TugasViewHolder> {
-    private Context context;
-    private List<TugasModel> tugasList;
+    private final Context context;
+    private final List<TugasModel> tugasList;
 
     public TugasAdapter(Context context, List<TugasModel> tugasList) {
         this.context = context;
