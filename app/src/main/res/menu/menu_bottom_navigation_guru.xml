@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_dashboard_guru"
+        android:icon="@drawable/ic_home_guru"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/menu_chat_guru"
+        android:icon="@drawable/ic_chat"
+        android:title="Virtual Assistant" />
+    <item
+        android:id="@+id/menu_profile_guru"
+        android:icon="@drawable/ic_person"
+        android:title="Profil guru" />
+</menu>
