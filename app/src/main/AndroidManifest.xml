@@ -17,6 +17,18 @@
         android:theme="@style/Theme.Elearning_smkn_ngambon"
         tools:targetApi="31">
         <activity
+            android:name=".ui.guru.EditTugasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.guru.TambahTugasGuruActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.guru.DetailMateriGuruActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.guru.MateriGuruActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.guru.UbahPasswordActivityGuru"
             android:exported="false" />
         <activity

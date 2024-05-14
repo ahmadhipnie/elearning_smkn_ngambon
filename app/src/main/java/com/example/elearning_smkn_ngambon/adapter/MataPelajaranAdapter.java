@@ -70,7 +70,7 @@ public class MataPelajaranAdapter extends RecyclerView.Adapter<MataPelajaranAdap
             tvJudulMapel = itemView.findViewById(R.id.tv_judul_mapel);
             tvKelas = itemView.findViewById(R.id.tv_kelas);
             btnLihatDetail = itemView.findViewById(R.id.btn_lihat_detail);
-            cvMataPelajaran = itemView.findViewById(R.id.cv_tugas);
+            cvMataPelajaran = itemView.findViewById(R.id.cv_mata_pelajaran);
         }
     }
 }
