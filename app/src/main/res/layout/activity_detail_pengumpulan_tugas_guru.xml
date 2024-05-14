@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.guru.DetailPengumpulanTugasGuruActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnKembali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Detail Pengumpulan"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#eeeeee"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/tugas_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_lampiran_tugas_guru"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="lampiran tugas siswa"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/poppins_light"/>
+
+                        <TextView
+                            android:id="@+id/tv_waktu_pengumpulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="waktu pengumpulan"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/poppins_light"/>
+
+                        <TextView
+                            android:id="@+id/tv_judul_pengumpulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="judul pengumpulan"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/poppins_light"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/et_nilai_pengumpulan_tugas"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="berikan nilai tugas"
+            android:inputType="number"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_editext"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="30dp">
+
+
+            <Button
+                android:id="@+id/btn_download_tugas"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="Download Tugas"
+                android:layout_marginHorizontal="10dp"
+                app:backgroundTint="@color/text"
+                app:strokeColor="@color/button"
+                app:strokeWidth="2dp"
+                app:iconTint="@color/button"
+                app:cornerRadius="10dp"
+                android:textColor="@color/button"
+
+                app:icon="@drawable/ic_drive_file_move"
+                />
+
+            <Button
+                android:id="@+id/btn_simpan_nilai"
+                style="@style/Widget.Material3.Button"
+                android:textColor="@color/text"
+                app:backgroundTint="@color/button"
+                app:strokeColor="@color/text"
+                app:strokeWidth="2dp"
+                app:iconTint="@color/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:text="Berikan Nilai"
+                android:layout_marginHorizontal="10dp"
+                app:cornerRadius="10dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

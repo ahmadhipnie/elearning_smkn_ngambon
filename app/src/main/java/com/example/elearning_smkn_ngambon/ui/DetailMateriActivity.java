@@ -59,7 +59,7 @@ public class DetailMateriActivity extends AppCompatActivity {
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
 
         // Set judul file
-        String fileName = judulMateri;
+        String fileName = judulMateri + ".pdf";
         request.setTitle(fileName);
         request.setDescription("Mengunduh materi");
         request.allowScanningByMediaScanner();

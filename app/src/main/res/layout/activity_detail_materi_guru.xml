@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.guru.DetailMateriGuruActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/btnKembali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_marginRight="30dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Detail Materi"
+                    android:textColor="@color/white"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_materi"/>
+
+        <TextView
+            android:id="@+id/tv_judul_materi_guru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Judul Materi"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:maxLines="3"/>
+
+        <TextView
+            android:id="@+id/tv_keterangan_detail_materi_guru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="ini keterangan materi"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_download_materi_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Download Materi"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                style="@style/Widget.Material3.Button"
+                android:textColor="@color/text"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@color/button"
+                app:strokeColor="@color/text"
+                app:strokeWidth="2dp"
+                app:iconTint="@color/text"
+                />
+
+            <Button
+                android:id="@+id/btn_tambah_tugas_guru"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tambah Tugas"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/button"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/baseline_add_24"
+                app:backgroundTint="@color/text"
+                app:strokeColor="@color/button"
+                app:strokeWidth="2dp"
+                app:iconTint="@color/button"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tugas_guru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_tugas"
+            android:layout_marginHorizontal="20dp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</ScrollView>

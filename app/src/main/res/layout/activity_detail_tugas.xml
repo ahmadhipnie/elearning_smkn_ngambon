@@ -117,6 +117,25 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tv_status_tugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#ff0000"
+                android:text="Belum Mengumpulkan Tugas"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pengumpulan_tugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_pengumpulan_tugas"
+                />
+
 
         </LinearLayout>
     </ScrollView>

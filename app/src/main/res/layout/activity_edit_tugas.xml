@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.guru.EditTugasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/btnKembali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_marginRight="30dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Edit Tugas"
+                    android:textColor="@color/white"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/et_keterangan_tugas_guru"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:maxLines="100"
+            android:hint="keterangan tugas"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_editext"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <EditText
+            android:id="@+id/et_tenggat_waktu_tugas_guru"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="tenggat waktu tugas ex : 01-08-2024"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_editext"
+            android:layout_marginHorizontal="20dp"
+            />
+
+            <Button
+                android:id="@+id/btn_edit_tugas_guru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ubah Tugas"
+                android:layout_margin="20dp"
+                style="@style/Widget.Material3.Button"
+                android:textColor="@color/text"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@color/button"
+                app:strokeColor="@color/text"
+                app:strokeWidth="2dp"
+                app:iconTint="@color/text"
+                />
+
+
+    </LinearLayout>
+
+</ScrollView>
